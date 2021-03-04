@@ -1,0 +1,22 @@
+.box-links {
+
+    .btn--box {
+        align-items: flex-start;
+        min-height: 140px;
+    }
+
+
+    &__image {
+        position: absolute;
+        top: 50px;
+        z-index: -1;
+        width: 50%;
+        height: 100%;
+        border-top-left-radius: 65px;
+        border-bottom-left-radius: 65px;
+
+        &:after {
+            opacity: 0.5;
+        }
+    }
+}

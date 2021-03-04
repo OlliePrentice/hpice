@@ -1,0 +1,64 @@
+.hero {
+
+    &__carousel-wrap {
+        width: 50vw;
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -20px;
+            left: 20%;
+            width: 100%;
+            height: 100%;
+            border-bottom-left-radius: 65px;
+            transform: rotate(-25deg);
+
+            @apply bg-quinary;
+
+            @media (max-width: $dmd) {
+                top: 5%;
+                left: 25%;
+                border-bottom-left-radius: 55px;
+            }
+
+            @media (max-width: $dsm) {
+                border-bottom-left-radius: 35px;
+            }
+
+            @media (max-width: $dxs) {
+                left: 22%;
+            }
+        }
+    }
+
+    &__carousel {
+        border-bottom-left-radius: 65px;
+    }
+
+    &__carousel-image {
+        height: 405px;
+
+
+        @media (max-width: $dmd) {
+            height: 300px;
+        }
+
+        @media (max-width: $dsm) {
+            height: 45vw;
+        }
+
+        @media (max-width: $dxs) {
+            height: 60vw;
+        }
+    }
+
+
+    .swiper-container {
+        .swiper-pagination {
+            bottom: 25px;
+            padding-right: 100px;
+            text-align: right;
+        }
+    }
+}

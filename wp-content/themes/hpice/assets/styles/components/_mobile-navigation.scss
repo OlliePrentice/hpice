@@ -1,0 +1,72 @@
+.mobile-navigation {
+    position: fixed;
+    top: 140px;
+    left: 50%;
+    z-index: 299;
+    width: 90%;
+    max-width: 450px;
+    max-height: calc(100vh - 180px);
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    transition: all 600ms;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+    padding: 1.5rem 30px;
+    transform: translateX(-50%);
+
+    @apply border border-gray-500 bg-white bg-opacity-90;
+
+    .burger {
+        margin-right: -14px;
+
+        @media only screen and (min-width: 768px) {
+            margin-right: 0;
+        }
+    }
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    &__nav {
+
+        li {
+            @apply md:text-slg lg:text-4xl mb-5 md:mb-7 last:mb-0 font-medium uppercase;
+
+            &:before {
+                display: none;
+            }
+
+
+            &.large-item {
+                @apply text-2xl md:text-3xl lg:text-5xl;
+            }
+
+
+            a {
+                @apply text-primary hover:text-secondary;
+            }
+        }
+
+        .sub-menu {
+            padding: 25px 0 5px 20px;
+
+            li {
+                @apply mb-4 md:mb-5;
+
+                a {
+                    &:before {
+                        content: '- ';
+                    }
+                }
+            }
+        }
+
+
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "name": "theme/boilerplate",
+    "description": "Helper packages for boilerplate",
+    "require": {
+        "fzaninotto/faker": "^1.9",
+        "mobiledetect/mobiledetectlib": "^2.8"
+    }
+}

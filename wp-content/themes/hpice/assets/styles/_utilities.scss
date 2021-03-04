@@ -1,0 +1,49 @@
+.remove-last-margin {
+    > * {
+      &:last-child {
+          margin-bottom: 0;
+      }
+    }
+}
+
+.remove-bullets {
+    li {
+        &:before {
+            display: none;
+        }
+    }
+}
+
+.img-full {
+    img {
+        width: 100%;
+    }
+}
+
+.theme-dark {
+
+    a {
+        @apply text-white hover:text-secondary;
+    }
+
+    li {
+        a {
+            @apply text-white hover:text-secondary;
+        }
+    }
+
+    h1,h2,h3,h4,h5,h6,p,li,span {
+        @apply text-white;
+    }
+
+    .swiper-pagination-bullets {
+        .swiper-pagination-bullet {
+     
+            @apply border-white;
+
+            &-active {
+                background: white;
+            }
+        }
+    }
+}

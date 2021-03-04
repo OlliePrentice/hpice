@@ -1,0 +1,68 @@
+.post-carousel {
+
+    &--secondary {
+        .card-service__title {
+            @apply bg-tertiary opacity-70;
+        }
+    }
+
+    &--tertiary {
+        .card-service__title {
+            @apply bg-secondary opacity-70;
+        }
+    }
+
+    &--quarternary {
+        .card-service__title {
+            @apply bg-primary opacity-70;
+        }
+    }
+
+    &__title {
+        min-width: 350px;
+
+        @media (max-width: $dlg) {
+            min-width: 240px;
+        }
+    }
+
+    &__item {
+
+        &--post {
+            max-width: 430px;
+        }
+
+        &--service {
+            margin: -28px 0 0;
+        }
+    }
+
+    .swiper-button-next {
+        right: -45px;
+
+        @media (max-width: $dlg) {
+            right: 15px;
+        }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        top: 65px;
+        width: 32px;
+        height: 32px;
+        transform: translateY(0);
+
+        @media (max-width: $dlg) {
+            width: 25px;
+            height: 25px;
+        }
+
+        &:after {
+            font-size: 32px;
+
+            @media (max-width: $dlg) {
+                font-size: 25px;    
+            }
+        }
+    }
+
+}

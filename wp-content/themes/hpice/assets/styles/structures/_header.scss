@@ -1,0 +1,106 @@
+.main-header {
+
+    &__nav {
+
+        > ul {
+            @apply -mx-3 p-0;
+            > li {
+                @apply px-3 uppercase;
+
+                > a {
+                    &:not(.btn) {
+                        @apply py-10 font-medium hover:text-secondary;
+                    }
+                }
+            }
+        }
+
+
+        li {
+            position: relative;
+
+            @apply m-0 text-sm xl:text-slg inline-block;
+
+
+            &.menu-item-has-children {
+                &:hover, &:focus {
+                    > .sub-menu-0 {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+                }
+
+                > a {
+                    position: relative;
+                    // padding-right: 1rem;
+
+                    &:hover, &:focus {
+                        + .sub-menu-0 {
+                            opacity: 1;
+                            visibility: visible;
+                            pointer-events: auto;
+                        }
+                    }
+
+                    // &:after {
+                    //     content: '';
+                    //     display: block;
+                    //     position: absolute;
+                    //     top: 50%;
+                    //     right: -0.15rem;
+                    //     width: 0.4rem;
+                    //     height: 0.4rem;
+                    //     transform: translateY(-50%) translateX(-50%) rotate(135deg);
+
+                    //     @apply border-r-2 border-t-2 border-white;
+        
+                    // }
+                }
+            }
+        }
+
+        a {
+            display: block;
+        }
+
+        .sub-menu-0 {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            z-index: 5;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            @apply shadow-xl transition whitespace-nowrap;
+
+            transform: translateX(-50%);
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 50%;
+                z-index: -1;
+                border-right: .5rem solid transparent!important;
+                border-left: .5rem solid transparent!important;
+                border-bottom: .5rem solid;
+                transform: translateX(-50%) translateY(-100%);
+                @apply border-tertiary shadow-sm;
+            }
+
+            li {
+                display: block;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+            }
+
+            a {
+                @apply py-2 px-5 bg-tertiary hover:bg-secondary hover:text-white; 
+
+            }
+        }
+    }
+}
