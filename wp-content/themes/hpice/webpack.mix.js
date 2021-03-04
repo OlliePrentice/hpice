@@ -14,7 +14,7 @@ mix.sass('./assets/styles/style.scss', 'styles/style.css')
         require('autoprefixer'),
         require('postcss-custom-properties')
     ]
-});
+}).sass('./assets/styles/tailwind.scss', 'styles/tailwind.css');
 
 mix.js('./assets/scripts/index.js', 'scripts/app.js');
 
