@@ -12,7 +12,7 @@ $company    = get_field( 'testimonial_company', $_post->ID );
     <div>
         <?php echo apply_filters( 'the_content', $_post->post_content ); ?>
     </div>
-    <div class="flex flex-wrap -mx-3 pt-6">
+    <div class="flex flex-wrap -mx-3 pt-2">
         
         <?php if ( $thumbnail ) : ?>
             <div class="px-3">

@@ -10,7 +10,7 @@ body {
 
 
 a {
-    @apply transition text-primary hover:text-secondary;
+    @apply transition text-secondary hover:text-primary;
 
     span {
         transition: none;
@@ -33,7 +33,7 @@ ul {
     @apply pl-6;
 
 
-    li {
+    > li {
 
         &:before {
             content: '';
@@ -46,6 +46,12 @@ ul {
             
             @apply bg-secondary rounded-full;
         }
+    }
+}
+
+li {
+    > ul, > ol {
+        @apply mt-2;
     }
 }
 
@@ -168,7 +174,6 @@ ul {
     }
 }
 
-
 .swiper-pagination-bullets {
     .swiper-pagination-bullet {
         width: 19px;
@@ -181,6 +186,12 @@ ul {
         &-active {
             background: black;
         }
+    }
+}
+
+.swiper-container {
+    .swiper-button-next, .swiper-button-prev {
+        @apply text-gray-400;
     }
 }
 
@@ -219,12 +230,6 @@ ul {
     }
 }
 
-.swiper-container {
-    .swiper-button-next {
-        @apply text-gray-400;
-    }
-}
-
 .dropdown {
     &.active {
         .dropdown__trigger {
@@ -246,5 +251,6 @@ ul.menu {
 }
 
 .acf-map {
+    width: 100%!important;
     height: 350px;
 }

@@ -27,6 +27,9 @@ function Sliders() {
 
     $('.hero__carousel').each((_index, elem) => {
         initSwiper(elem, {
+            autoplay: {
+                delay: 5000,
+            },
             slidesPerView: 1,
             loop: true,
             pagination: {
@@ -53,6 +56,7 @@ function Sliders() {
             spaceBetween: 60,
             navigation: {
                 nextEl: $(elem).find('.swiper-button-next')[0],
+                prevEl: $(elem).find('.swiper-button-prev')[0],
             },
             breakpoints: {
                 1024: {

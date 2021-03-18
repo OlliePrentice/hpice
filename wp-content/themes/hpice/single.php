@@ -13,7 +13,7 @@ if ( is_singular( 'post' ) ) {
         'filter'                => get_block_field( 'filter', $blog_id )['filter'],
     ];
 
-    echo '<section class="' . padding_classes() . '">';
+    echo '<section>';
         get_template_part( 'template-parts/blocks/page-header', '', $page_header_fields );
     echo '</section>';
 }

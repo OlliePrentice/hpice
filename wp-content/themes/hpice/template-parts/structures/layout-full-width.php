@@ -12,5 +12,5 @@ $classes[] = padding_classes();
 ?>
 
 <section id="<?php echo $id; ?>" class="<?php echo implode( ' ', $classes ); ?> <?php echo 'block-' . $slug; ?>">
-        <?php include( get_theme_file_path( "/template-parts/blocks/{$slug}.php" ) ); ?>
+    <?php include( get_theme_file_path( "/template-parts/blocks/{$slug}.php" ) ); ?>
 </section>

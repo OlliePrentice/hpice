@@ -22,9 +22,6 @@ $filter                 = !empty( $fields['filter'] ) ? $fields['filter'] : get_
                             </a>
                         </div>
                     <?php endif; ?>
-                    <?php if ( $heading ) : ?>
-                        <h1 class="text-lg sm:text-xl md:text-3xxl leading-snug !hidden md:!inline-block <?php echo $heading_background ? 'btn text-center pointer-events-none ' . $heading_background : ''; ?>"><?php echo $heading; ?></h1>
-                    <?php endif; ?>
                 </div>
             </div>
             <div class="px-4 w-1/2">
@@ -39,7 +36,7 @@ $filter                 = !empty( $fields['filter'] ) ? $fields['filter'] : get_
         </div>
         <div>
             <?php if ( $heading ) : ?>
-                <h1 class="text-lg sm:text-xl md:text-3xxl pt-3 leading-snug md:hidden <?php echo $heading_background ? 'btn text-center pointer-events-none ' . $heading_background : ''; ?>"><?php echo $heading; ?></h1>
+                <h1 class="text-lg sm:text-xl md:text-3xxl pt-3 leading-snug <?php echo $heading_background ? 'btn text-center pointer-events-none ' . $heading_background : ''; ?>"><?php echo $heading; ?></h1>
             <?php endif; ?>
         </div>
     </div>

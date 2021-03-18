@@ -1,4 +1,23 @@
 .post-carousel {
+    .container {
+        position: relative;
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            right: calc(100% - 2.5rem);
+            z-index: 10;
+            width: 50%;
+            height: calc(100% + 15px);
+            background: linear-gradient(to right, rgba(white, 1) 95%, rgba(white, 0));
+
+            @media (max-width: $dlg) {
+                display: none;
+            }
+        }
+    }
 
     &--secondary {
         .card-service__title {
@@ -34,6 +53,18 @@
 
         &--service {
             margin: -28px 0 0;
+        }
+    }
+
+    .swiper-button-prev {
+        left: -45px;
+
+        @media (max-width: $dlg) {
+            left: -10px;
+        }
+
+        @media (max-width: $dsm) {
+            left: -35px;
         }
     }
 

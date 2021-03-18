@@ -5,8 +5,18 @@ $post_type  = get_field( 'post_type' );
 $_posts     = get_field( 'posts' );
 $colour     = get_field( 'colour' );
 
-if($post_type === 'service') {
-    $_posts = get_field('services');
+if( $post_type === 'service' ) {
+    $_posts = get_field( 'services' );
+}
+
+if ( ! $_posts ) {
+    $_posts = get_posts(
+        [
+            'post_type'     => $post_type,
+            'post_status'   => 'publish',
+            'numberposts'   => 15
+        ]
+        );
 }
 
 ?>
@@ -37,6 +47,7 @@ if($post_type === 'service') {
                         <?php endforeach; ?>
                     </div>
                     <?php if ( $post_type === 'service' ) : ?>
+                        <div class="swiper-button-prev"></div>
                         <div class="swiper-button-next"></div>
                     <?php endif; ?>
                 </div>
